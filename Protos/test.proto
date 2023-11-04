@@ -1,0 +1,73 @@
+syntax = "proto3";
+
+option csharp_namespace = "gRPC.Demo";
+
+import "google/api/annotations.proto";
+
+package Test;
+
+service Test {
+    rpc CreateTest(CreateTestRequest)  returns (CreateTestResponse) {
+        option (google.api.http) = {
+            post: "/v1/test",
+            body: "*"
+        };
+    }
+    rpc GetTestById(ReadTestRequest)   returns (ReadTestResponse) {
+        option (google.api.http) = {
+            get: "/v1/test/{id}"
+        };
+    }
+    rpc GetAllTests(GetAllRequest)     returns (GetAllResponse) {
+        option (google.api.http) = {
+            get: "/v1/test"
+        };
+    }
+    rpc UpdateTest(UpdateTestRequest)  returns (UpdateTestResponse) {
+        option (google.api.http) = {
+            put : "/v1/test",
+            body: "*"
+        };
+    }
+    rpc DeleteTest(DeleteTestRequest)  returns (DeleteTestResponse) {
+        option (google.api.http) = {
+            delete: "/v1/test/{id}"
+        };
+    }
+}
+message CreateTestRequest {
+   string Name = 1;
+    string description = 2;
+}
+message CreateTestResponse {
+    int32 id = 1;
+}
+message ReadTestRequest {
+    int32 id = 1;
+}
+message ReadTestResponse {
+    int32 id = 1;
+    string Name = 2;
+    string description = 3;
+    string status = 4;
+}
+message GetAllRequest {
+}
+message GetAllResponse {
+    repeated ReadTestResponse tests = 1;
+}
+message UpdateTestRequest {
+    int32 id = 1;
+    string Name = 2;
+    string description = 3;
+    string status = 4;
+}
+message UpdateTestResponse {
+    int32 id = 1;
+}
+message DeleteTestRequest {
+    int32 id = 1;
+}
+message DeleteTestResponse {
+    int32 id = 1;
+}

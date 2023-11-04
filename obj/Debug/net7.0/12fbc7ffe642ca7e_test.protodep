@@ -1,0 +1,5 @@
+obj\Debug\net7.0\Protos/Test.cs \
+obj\Debug\net7.0\Protos/TestGrpc.cs: google/api/http.proto\
+ C:/Users/hassa/.nuget/packages/grpc.tools/2.59.0/build/native/include/google/protobuf/descriptor.proto\
+ google/api/annotations.proto\
+ Protos/test.proto
