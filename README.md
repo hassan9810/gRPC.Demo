@@ -17,9 +17,6 @@ The gRPC.Demo project is a gRPC-based application that provides a set of service
   - [Get All Items](#get-all-items)
   - [Update Item](#update-item)
   - [Delete Item](#delete-item)
-- [API Documentation](#api-documentation)
-- [Contributing](#contributing)
-  - [Development Environment Setup](#development-environment-setup)
 
 ## Features
 
