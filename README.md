@@ -41,6 +41,6 @@ Before you can run the gRPC.Demo project, you need to have the following prerequ
 
 ```bash
 git clone https://github.com/hassan9810/gRPC.Demo.git
-cd grpc-demo
+cd grpc*
 dotnet build
 dotnet run
